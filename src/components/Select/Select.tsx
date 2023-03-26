@@ -146,7 +146,7 @@ function Select<T>({ defaultOption, options, onChange }: SelectProps<T>) {
       role="listbox"
       data-expanded={expanded}
       aria-activedescendant={getOptionId(selectedOptionIndex)}
-      tabIndex={-1}
+      tabIndex={expanded ? 0 : -1}
       onKeyDown={handleKeyDown}
       onClick={handleChange}
       ref={containerRef}
