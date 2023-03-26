@@ -1,0 +1,29 @@
+.select {
+  display: grid;
+  position: relative;
+}
+
+.select-option {
+  order: 1;
+}
+
+.select-options {
+  display: none;
+}
+
+.select-option[aria-selected="true"] {
+  order: 0;
+}
+
+.select[data-expanded="true"] .select-options {
+  display: grid;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.select[data-expanded="true"] .select-options[data-orientation="top"] {
+  top: auto;
+  bottom: 100%;
+}
